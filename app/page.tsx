@@ -12,19 +12,19 @@ export default function Home() {
   // Sample videos from the YouTube channel
   const featuredVideos = [
     {
-      id: 'VIDEO_ID_1',
-      title: 'Divine Bhajan - Radhe Krishna',
-      description: 'Beautiful devotional bhajan dedicated to Radha Krishna',
+      id: 'VI7vPd9_g1g',
+      title: 'Sri Radha Kripa katakshya Stotra',
+      description: 'Beautiful devotional prayer dedicated to Radha Rani',
     },
     {
-      id: 'VIDEO_ID_2',
-      title: 'Nimbarka Sampradaya Teachings',
-      description: 'Discourse on the philosophy of Dvaitadvaita',
+      id: '-nzinRwRfSs',
+      title: 'Holi Mahotsav at Ashram',
+      description: 'Kunj Bihari Holi Mahotsav',
     },
     {
-      id: 'VIDEO_ID_3',
-      title: 'Morning Aarti',
-      description: 'Daily morning aarti at Sri Harivyas Nikunja Mandir',
+      id: 'D85dKP2PjBg',
+      title: 'Latest Spiritual Discourse',
+      description: 'Recent teachings and devotional session',
     },
   ];
 

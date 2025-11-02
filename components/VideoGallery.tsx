@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import ReactPlayer from 'react-player/youtube';
 import { Play, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -20,8 +19,12 @@ interface VideoGalleryProps {
 export default function VideoGallery({ videos, featured = false }: VideoGalleryProps) {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  const getYouTubeUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
-  const getThumbnail = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+  const getThumbnail = (id: string) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
+  const handleThumbnailError = (e: React.SyntheticEvent<HTMLImageElement, Event>, videoId: string) => {
+    // Fallback to standard definition thumbnail if high quality fails
+    e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
+  };
 
   return (
     <>
@@ -45,6 +48,7 @@ export default function VideoGallery({ videos, featured = false }: VideoGalleryP
                 src={video.thumbnail || getThumbnail(video.id)}
                 alt={video.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                onError={(e) => handleThumbnailError(e, video.id)}
               />
               
               {/* Overlay */}
@@ -103,23 +107,18 @@ export default function VideoGallery({ videos, featured = false }: VideoGalleryP
               </button>
 
               {/* Video Player */}
-              <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl">
-                <ReactPlayer
-                  url={getYouTubeUrl(selectedVideo)}
-                  width="100%"
-                  height="100%"
-                  playing
-                  controls
-                  config={{
-                    youtube: {
-                      playerVars: { 
-                        autoplay: 1,
-                        modestbranding: 1,
-                        rel: 0
-                      }
-                    }
-                  }}
-                />
+              <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl bg-black">
+                {selectedVideo && (
+                  <iframe
+                    key={selectedVideo}
+                    src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0&modestbranding=1`}
+                    width="100%"
+                    height="100%"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                )}
               </div>
             </motion.div>
           </motion.div>

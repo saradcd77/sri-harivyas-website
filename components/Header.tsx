@@ -57,13 +57,10 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-orange-500 group-hover:border-orange-600 transition-colors">
                 <Image
-                  src="/images/logo.png"
+                  src="/Ashram_logo.png"
                   alt="Sri Harivyas Nikunja Mandir"
                   fill
                   className="object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = '/Ashram_logo.png';
-                  }}
                 />
               </div>
               <div className="hidden md:block">

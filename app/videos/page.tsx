@@ -12,34 +12,29 @@ export default function VideosPage() {
   // Replace these with real video IDs from the channel
   const videos = [
     {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Divine Bhajan - Radhe Krishna',
-      description: 'Beautiful devotional bhajan dedicated to Radha Krishna',
+      id: 'VI7vPd9_g1g', // Sri Radha Kripa katakshya Stotra
+      title: 'Sri Radha Kripa katakshya Stotra',
+      description: 'Beautiful devotional prayer dedicated to Radha Rani',
     },
     {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Nimbarka Sampradaya Teachings',
-      description: 'Discourse on the philosophy of Dvaitadvaita',
+      id: '-nzinRwRfSs', // Holi Mahotsav at Ashram
+      title: 'Holi Mahotsav at Ashram',
+      description: 'Kunj Bihari Holi Mahotsav',
     },
     {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Morning Aarti',
-      description: 'Daily morning aarti at Sri Harivyas Nikunja Mandir',
+      id: 'D85dKP2PjBg', // Latest stream from @muraridasg
+      title: 'Latest Spiritual Discourse',
+      description: 'Recent teachings and devotional session',
     },
     {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Evening Bhajan Sandhya',
-      description: 'Evening devotional singing session',
+      id: 'pRZKRGH5Hr8', // From @muraridasg
+      title: 'Devotional Bhajan Session',
+      description: 'Beautiful devotional singing and prayers',
     },
     {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Festival Celebration',
-      description: 'Special festival celebration at the ashram',
-    },
-    {
-      id: 'dQw4w9WgXcQ', // Replace with actual video ID
-      title: 'Spiritual Discourse',
-      description: 'Deep dive into Nimbarka philosophy',
+      id: 'IyLRMgOF0VM', // Sri Murari Dasji Sankirtan
+      title: 'Sri Murari Dasji Sankirtan',
+      description: 'Sacred kirtan session with Sri Murari Dasji',
     },
   ];
 
