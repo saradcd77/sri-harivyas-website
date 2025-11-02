@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "teachings": "Teachings",
+    "videos": "Videos",
+    "events": "Events",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Welcome to",
+    "title": "Sri Harivyas Nikunja Mandir",
+    "subtitle": "A Sacred Place of Nimbarka Sampradaya",
+    "description": "Experience divine love and devotion through the teachings of Nimbarka Sampradaya",
+    "cta": "Explore More"
+  },
+  "about": {
+    "title": "About Nimbarka Sampradaya",
+    "description": "Nimbarka Sampradaya is one of the four Vaishnava sampradayas, founded by Nimbarkacharya. It emphasizes the philosophy of Dvaitadvaita (dualistic non-dualism) and devotion to Radha-Krishna.",
+    "mission": "Our Mission",
+    "missionText": "To spread the divine teachings of Nimbarka Sampradaya and foster spiritual growth through devotion, service, and community."
+  },
+  "videos": {
+    "title": "Sacred Videos",
+    "subtitle": "Watch our collection of bhajans, discourses, and spiritual teachings",
+    "latest": "Latest Videos",
+    "viewAll": "View All Videos"
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subtitle": "Join us for spiritual celebrations and programs",
+    "noEvents": "No upcoming events at this time",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow Us"
+  },
+  "footer": {
+    "copyright": "© 2024 Sri Harivyas Nikunja Mandir. All rights reserved.",
+    "tagline": "Radhe Krishna Radhe Krishna Krishna Krishna Radhe Radhe"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "watchNow": "Watch Now",
+    "register": "Register",
+    "donate": "Donate"
+  }
+}
+
