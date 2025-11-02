@@ -68,7 +68,7 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
                 <span className="text-sm text-gray-600">
                   Sri Harivyas Nikunja Mandir<br />
-                  Vrindavan, India
+                  Raman Reiti, Vrindavan, India
                 </span>
               </li>
               <li className="flex items-center gap-2">
@@ -95,13 +95,17 @@ export default function Footer() {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/muraridassg"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all shadow-md"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/madhurisharan/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all shadow-md"
               >
                 <Instagram className="w-5 h-5" />

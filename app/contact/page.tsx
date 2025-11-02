@@ -53,7 +53,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-gray-800 mb-1">{t('contact.address')}</h3>
                       <p className="text-gray-600">
                         Sri Harivyas Nikunja Mandir<br />
-                        Vrindavan, Uttar Pradesh<br />
+                        Raman Reiti, Vrindavan<br />
                         India
                       </p>
                     </div>
@@ -94,13 +94,17 @@ export default function ContactPage() {
                     <Youtube className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/muraridassg"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                   >
                     <Facebook className="w-6 h-6 text-white" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/madhurisharan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
                   >
                     <Instagram className="w-6 h-6 text-white" />
