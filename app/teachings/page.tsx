@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { BookOpen, Sparkles, Heart, Lotus } from 'lucide-react';
+import { BookOpen, Sparkles, Heart, Flower2 } from 'lucide-react';
 
 export default function TeachingsPage() {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ export default function TeachingsPage() {
       color: 'orange',
     },
     {
-      icon: Lotus,
+      icon: Flower2,
       title: 'Radha-Krishna Bhakti',
       description: 'The path of pure devotional love towards the divine couple Radha and Krishna.',
       color: 'pink',
