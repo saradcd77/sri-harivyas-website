@@ -9,28 +9,25 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: ashram-website/package-lock.json
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        working-directory: ./ashram-website
         run: npm ci
 
       - name: Build application
-        working-directory: ./ashram-website
         run: npm run build
 
       - name: Deploy to Lightsail
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{ secrets.LIGHTSAIL_USERNAME }}
@@ -38,22 +35,8 @@ jobs:
           port: ${{ secrets.LIGHTSAIL_PORT }}
           script: |
             cd ${{ secrets.DEPLOY_PATH }}
-            
-            # Pull latest changes
             git pull origin main
-            
-            # Install dependencies
             npm install --production
-            
-            # Build application
             npm run build
-            
-            # Restart PM2 application
             pm2 restart ashram-website || pm2 start npm --name "ashram-website" -- start
-            
-            # Save PM2 configuration
             pm2 save
-            
-            echo "✅ Deployment completed successfully!"
-            echo "राधेकृष्ण राधेकृष्ण कृष्णकृष्ण राधेराधे 🙏"
-
