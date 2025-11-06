@@ -38,89 +38,34 @@ npm run build
 npm start
 ```
 
-## 🌐 Deployment to AWS Lightsail
-
-### Option 1: Static Export (Recommended for Lightsail)
-
-1. Update `next.config.ts` to enable static export:
-
-```typescript
-const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
-};
-```
-
-2. Build the static site:
+## 🧪 Testing
 
 ```bash
-npm run build
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests for CI
+npm run test:ci
 ```
 
-3. The static files will be in the `out` directory. Upload these to your Lightsail instance.
+See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for detailed testing documentation.
 
-### Option 2: Node.js Server
+## 🚀 Deployment
 
-1. Build the application:
+The website uses automated deployment with GitHub Actions. Every push to the `main` branch will:
 
-```bash
-npm run build
-```
+1. ✅ Run linter
+2. ✅ Run tests
+3. ✅ Build the static site
+4. ✅ Deploy to production server
 
-2. Upload the entire project to your Lightsail instance
-
-3. Install dependencies and start:
-
-```bash
-npm install --production
-npm start
-```
-
-4. Use PM2 to keep the app running:
-
-```bash
-npm install -g pm2
-pm2 start npm --name "ashram-website" -- start
-pm2 save
-pm2 startup
-```
-
-### Nginx Configuration (for both options)
-
-For static export:
-
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-    root /path/to/out;
-    index index.html;
-
-    location / {
-        try_files $uri $uri.html $uri/ =404;
-    }
-}
-```
-
-For Node.js server:
-
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
+**Tests must pass before deployment!**
 
 ## 📹 Adding YouTube Videos
 
