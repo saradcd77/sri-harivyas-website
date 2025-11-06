@@ -3,9 +3,11 @@ import Home from '@/app/page';
 
 // Mock next/link
 jest.mock('next/link', () => {
-  return ({ children, href }: any) => {
+  const MockLink = ({ children, href }: React.PropsWithChildren<{ href?: string }>) => {
     return <a href={href}>{children}</a>;
   };
+  MockLink.displayName = 'MockLink';
+  return MockLink;
 });
 
 // Mock react-i18next
@@ -28,9 +30,9 @@ jest.mock('react-i18next', () => ({
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    h1: ({ children, ...props }: any) => <h1 {...props}>{children}</h1>,
-    p: ({ children, ...props }: any) => <p {...props}>{children}</p>,
+    div: ({ children, ...props }: React.PropsWithChildren<Record<string, unknown>>) => <div {...props}>{children}</div>,
+    h1: ({ children, ...props }: React.PropsWithChildren<Record<string, unknown>>) => <h1 {...props}>{children}</h1>,
+    p: ({ children, ...props }: React.PropsWithChildren<Record<string, unknown>>) => <p {...props}>{children}</p>,
   },
 }));
 

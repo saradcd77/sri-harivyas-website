@@ -102,7 +102,7 @@ export default function TeachingsPage() {
             className="bg-gradient-to-r from-orange-100 to-pink-100 p-12 rounded-2xl text-center"
           >
             <p className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-devanagari">
-              "राधेकृष्ण राधेकृष्ण कृष्णकृष्ण राधेराधे"
+              &ldquo;राधेकृष्ण राधेकृष्ण कृष्णकृष्ण राधेराधे&rdquo;
             </p>
             <p className="text-lg text-gray-700">
               The divine names that purify the heart and awaken love
