@@ -26,6 +26,7 @@ export default function Header() {
     { href: '/teachings', label: t('nav.teachings') },
     { href: '/videos', label: t('nav.videos') },
     { href: '/events', label: t('nav.events') },
+    { href: '/atmaveda', label: t('nav.atmaveda') },
     { href: '/contact', label: t('nav.contact') },
   ];
 
