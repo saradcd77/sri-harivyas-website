@@ -7,6 +7,12 @@ import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
+interface NavLink {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
 export default function Header() {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +26,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { href: '/', label: t('nav.home') },
     { href: '/about', label: t('nav.about') },
     { href: '/teachings', label: t('nav.teachings') },
@@ -49,9 +55,9 @@ export default function Header() {
 
       {/* Navigation */}
       <nav
-        className={\`fixed top-10 left-0 right-0 z-40 transition-all duration-300 \${
+        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-        }\`}
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
