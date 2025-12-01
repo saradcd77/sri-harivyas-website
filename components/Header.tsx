@@ -27,6 +27,7 @@ export default function Header() {
     { href: '/videos', label: t('nav.videos') },
     { href: '/events', label: t('nav.events') },
     { href: '/atmaveda', label: t('nav.atmaveda') },
+    { href: 'https://saradcd77.github.io/bhagavad-gita-daily', label: t('nav.gitaDaily'), external: true },
     { href: '/contact', label: t('nav.contact') },
   ];
 
@@ -48,9 +49,9 @@ export default function Header() {
 
       {/* Navigation */}
       <nav
-        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-300 ${
+        className={\`fixed top-10 left-0 right-0 z-40 transition-all duration-300 \${
           isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-        }`}
+        }\`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -75,13 +76,25 @@ export default function Header() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-4 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
 
@@ -109,14 +122,27 @@ export default function Header() {
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-4 space-y-2">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
           </div>
@@ -125,4 +151,3 @@ export default function Header() {
     </>
   );
 }
-
