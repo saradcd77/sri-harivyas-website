@@ -32,7 +32,7 @@ export default function Header() {
     { href: '/teachings', label: t('nav.teachings') },
     { href: '/videos', label: t('nav.videos') },
     { href: '/events', label: t('nav.events') },
-    { href: '/atmaveda', label: t('nav.atmaveda') },
+    // { href: '/atmaveda', label: t('nav.atmaveda') },
     { href: 'https://saradcd77.github.io/bhagavad-gita-daily', label: t('nav.gitaDaily'), external: true },
     { href: '/contact', label: t('nav.contact') },
   ];
