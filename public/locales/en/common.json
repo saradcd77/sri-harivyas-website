@@ -5,6 +5,7 @@
     "teachings": "Teachings",
     "videos": "Videos",
     "events": "Events",
+    "publications": "Publications",
     "atmaveda": "Atmaveda",
     "gitaDaily": "Gita Daily",
     "gallery": "Gallery",
@@ -36,6 +37,18 @@
     "date": "Date",
     "time": "Time",
     "location": "Location"
+  },
+  "publications": {
+    "title": "Spiritual Publications",
+    "subtitle": "Sacred books of Nimbarka Sampradaya and Hindu philosophy",
+    "description": "Study and download spiritual texts, ritual manuals, and guides from Sri Harivyas Nikunja Mandir.",
+    "download": "Download PDF",
+    "viewOnline": "View Online",
+    "language": "Language",
+    "format": "Format",
+    "size": "File Size",
+    "typeBook": "Book",
+    "noBooks": "No publications are available at this time."
   },
   "contact": {
     "title": "Get in Touch",
